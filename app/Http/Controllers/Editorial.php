@@ -30,4 +30,19 @@ class Editorial extends Controller
         $category->save();
         return redirect()->route('listaEdit');
     } 
+    public function buscar($id){
+        $p=Editoriales::findOrFail($id);
+        $editor=Editoriales::all();
+        return view('editoral.datos',compact('p', 'editor'));
+   }
+ 
+   public function act(Request $request, $id){
+         $category = Editoriales::findOrfail($id);//buscar el id del producto para actualizar
+         $category->nombre = $request->input('nombre');
+         $category->direccion = $request->input('dir');
+         $category->ciudad = $request->input('ciu');
+         $category->telefono = $request->input('tel');
+         $category->save();
+         return redirect()->route('listaEdit');
+}
 }

@@ -24,8 +24,8 @@
             <td> {{ $c->direccion }}</td>
             <td> {{ $c->ciudad }} </td>
             <td> {{ $c->telefono }}</td>
+            <td> <a href="{{route('actualizar', $c->id)}}">Actualizar</a></td>
             </tr>
-        
     @endforeach
     </tbody>
 </table >

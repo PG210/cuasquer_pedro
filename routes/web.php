@@ -25,3 +25,7 @@ Route::get('/lista/editorial', [Editorial::class, 'lista_edit'])->name('listaEdi
 Route::get('/lista/formulario/editorial', [Editorial::class, 'formulario'])->name('regEditorial');
 //ruta post registro
 Route::post('/formulario/registro', [Editorial::class, 'regis'])->name('registro');
+//actu
+Route::get('formulario/actualizar/{id}', [Editorial::class, 'buscar'])->name('actualizar');//enviamos el parametro a la ruta
+//actu
+Route::post('formulario/actualizar/{id}', [Editorial::class, 'act'])->name('actuEdit');//enviamos el parametro a la ruta
