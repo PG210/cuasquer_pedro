@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Principal;
 use App\Http\Controllers\Libros;
+use App\Http\Controllers\Editorial;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +19,9 @@ use App\Http\Controllers\Libros;
 Route::get('/', [Principal::class, 'index']);
 //Ruta lista libros
 Route::get('/lista/libros', [Libros::class, 'index'])->name('listado');
+//Ruta editorial
+Route::get('/lista/editorial', [Editorial::class, 'lista_edit'])->name('listaEdit');
+//Ruta registro editorial
+Route::get('/lista/formulario/editorial', [Editorial::class, 'formulario'])->name('regEditorial');
+//ruta post registro
+Route::post('/formulario/registro', [Editorial::class, 'regis'])->name('registro');

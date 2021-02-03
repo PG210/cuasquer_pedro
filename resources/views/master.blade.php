@@ -12,12 +12,13 @@
         <link href="{{ url('/assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     </head>
     <body>
+    <br>
 
     @include('navigation')
          <div class="container">
          @yield('content')
      </div>
-        
+        <br><br><br>
         <!-- Footer -->
 <footer class="bg-primary text-center text-lg-start">
   <!-- Grid container -->

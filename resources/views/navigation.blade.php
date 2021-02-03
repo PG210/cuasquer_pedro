@@ -11,7 +11,7 @@
           <a class="nav-link" href="{{route('listado')}}">Libros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Editorial</a>
+          <a class="nav-link" href="{{route('listaEdit')}}">Editorial</a>
         </li>
       </ul>
     </div>
